@@ -16,8 +16,6 @@ require "sprockets/railtie"
 Bundler.require(*Rails.groups)
 
 Dotenv::Railtie.load
-p '========='
-p ENV['DB_USERNAME']
 DB_USERNAME = ENV['DB_USERNAME']
 DB_PASSWORD = ENV['DB_PASSWORD']
 
