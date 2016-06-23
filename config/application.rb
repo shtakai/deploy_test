@@ -15,6 +15,12 @@ require "sprockets/railtie"
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
+Dotenv::Railtie.load
+p '========='
+p ENV['DB_USERNAME']
+DB_USERNAME = ENV['DB_USERNAME']
+DB_PASSWORD = ENV['DB_PASSWORD']
+
 module AwesomeAuction
   class Application < Rails::Application
     # Settings in config/environments/* take precedence over those specified here.
